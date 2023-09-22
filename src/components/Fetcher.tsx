@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+
 import { fetchData } from "../api/endpoints";
 import getErrorMessage from "../lib/utils/errorHandler";
 
@@ -16,18 +17,18 @@ export default function Fetcher() {
   if (isError) {
     const error_message = getErrorMessage(error);
     return (
-      <div>
+      <>
         <h2 className="text-xl mb-3">Oops!</h2>
         <p>Something went wrong...</p>
         <i className="text-red-500">{error_message}</i>
-      </div>
+      </>
     );
   }
 
   return (
-    <div>
-      <h2>Fetcher</h2>
+    <>
+      <h2 className="text-2xl mb-4">Fetcher</h2>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    </>
   );
 }

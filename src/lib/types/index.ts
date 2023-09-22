@@ -6,3 +6,13 @@ export type ThemeModes = {
   DARK: "dark";
   LIGHT: "light";
 };
+
+export type JsonPlaceholderAlbum = {
+  userId: string;
+  id: string;
+  title: string;
+};
+
+export type FormValues = {
+  album: string;
+};
